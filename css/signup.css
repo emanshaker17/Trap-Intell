@@ -1,0 +1,458 @@
+@import url("../css/normalize.css");
+@import url("../css/utilities.css");
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-image: url("../Images/binary.png");
+  background-size: cover;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Keep content above the pattern */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Page Shell ── */
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* ── Binary Background ── */
+/* .binary-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("../Images/binary.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+} */
+/* .binary-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("../Images/binary.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+
+  
+ --webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+} */
+/* ── Logo (top-left) ── */
+/* ─── HEADER ─── */
+header {
+  position: relative;
+  z-index: 10;
+  padding: 18px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+}
+.logo {
+  position: fixed;
+  top: 22px;
+  left: 36px;
+  display: flex;
+  gap: 10px;
+  animation: fadeDown 0.6s ease both;
+}
+.logo-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--clr-dark-navy);
+  letter-spacing: -0.3px;
+}
+
+/* ── right Panel — Hero Image ── */
+.right-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.hero-image-wrap {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 32px 80px rgba(138, 27, 250, 0.18),
+    0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: riseUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  aspect-ratio: 9/12;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── left Panel — Form ── */
+.left-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 48px 48px;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 600px;
+  animation: riseUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+/* ── Headings ── */
+.form-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--clr-dark-navy);
+  letter-spacing: -0.8px;
+  text-align: center;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+/* ── Form Grid ── */
+.form-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+/* Floating label inputs */
+.field-wrap {
+  position: relative;
+}
+
+.field-wrap label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: var(--clr-white);
+  padding: 0 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-text-dark);
+  z-index: 1;
+  transition: color 0.2s;
+  pointer-events: none;
+}
+
+.field-wrap input {
+  width: 100%;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.92rem;
+  color: var(--clr-dark-navy);
+  background: transparent;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.field-wrap input::placeholder {
+  color: #aab0c6;
+  font-size: 0.9rem;
+}
+
+.field-wrap input:focus {
+  border-color: var(--clr-blue-purple);
+  box-shadow: 0 0 0 3px var(--clr-blue-purple-10);
+}
+
+.field-wrap input:focus + label,
+.field-wrap:focus-within label {
+  color: var(--clr-blue-purple);
+}
+
+.pw-toggle:hover {
+  color: var(--clr-dark-navy);
+}
+/* ── Password Eye Icon ── */
+.field-wrap svg {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--clr-gray-blue);
+  transition: color 0.2s;
+}
+
+.field-wrap svg:hover {
+  color: var(--clr-dark-navy);
+}
+
+/* Password hint */
+.pw-hint {
+  font-size: 0.74rem;
+  color: var(--clr-text-muted);
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+/* ── Checkbox ── */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 24px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bbb;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.checkbox-row input[type="checkbox"]:checked {
+  background: var(--clr-blue-purple);
+  border-color: var(--clr-blue-purple);
+}
+
+.checkbox-row input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(40deg);
+}
+
+.checkbox-label {
+  font-size: 0.88rem;
+  color: var(--clr-text-muted);
+  white-space: nowrap;
+}
+
+.checkbox-label a {
+  color: var(--clr-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: none;
+}
+
+/* ── Primary Button ── */
+.btn-primary {
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--clr-blue-purple);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.18s,
+    box-shadow 0.18s;
+  box-shadow: 0 6px 24px rgba(64, 68, 228, 0.35);
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(64, 68, 228, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* ── Already have account ── */
+.login-row {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.88rem;
+  color: var(--clr-text-muted);
+}
+
+.login-row a {
+  color: var(--clr-purple);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-row a:hover {
+  text-decoration: underline;
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 16px;
+  color: var(--clr-text-muted);
+  font-size: 0.82rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d8d8e8;
+}
+
+/* ── Social Buttons ── */
+.social-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1.5px solid #dde0f0;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-dark-navy);
+  transition:
+    border-color 0.18s,
+    box-shadow 0.18s,
+    transform 0.15s;
+}
+
+.btn-social:hover {
+  border-color: var(--clr-blue-purple);
+  box-shadow: 0 4px 16px rgba(64, 68, 228, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-social svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ── Animations ── */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+  .left-panel {
+    display: none;
+  }
+  .right-panel {
+    padding: 100px 24px 48px;
+  }
+}
