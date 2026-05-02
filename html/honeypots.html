@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honeypots - Trap-intell</title>
+    <link rel="icon" type="image/png" href="../Images/logo.png" />
+    <link rel="stylesheet" href="../CSS/utilities.css" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link rel="stylesheet" href="../CSS/honeypots.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+
+      <!-- ══════════════════════════════
+           SIDEBAR
+      ══════════════════════════════ -->
+      <aside class="sidebar" id="sidebar">
+        <a href="Home.html" class="sidebar-logo">
+          <svg width="30" height="30" viewBox="0 0 39 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.8865 43.0497L27.0449 45.5729V37.4788C27.0449 37.1731 26.8972 36.8852 26.6475 36.7082L20.4142 32.2555V18.1751L23.1832 16.7919C24.8886 18.5279 28.0486 17.2135 27.9925 14.749C27.8499 10.7675 21.9668 11.1331 22.3451 15.0929L19.0451 16.7435C18.7241 16.904 18.5216 17.2314 18.5216 17.5905V32.7446C18.5216 33.049 18.6693 33.3368 18.919 33.5151L25.1523 37.9666V47.2554L22.3107 49.7785V38.4264C22.3107 37.9042 21.8866 37.48 21.3631 37.48H15.6813V33.4285C17.3333 32.5255 16.6429 29.8674 14.7337 29.903C12.8245 29.8674 12.1342 32.5268 13.7861 33.4285V38.4264C13.7861 38.9498 14.2102 39.374 14.7337 39.374H20.4168V51.4597L19.4692 52.3003L16.6276 49.7772V44.1082C16.6837 43.5719 15.9144 43.051 15.6125 42.7008C15.6507 42.5505 15.6762 42.39 15.6813 42.2142C15.6176 39.7166 11.9559 39.7153 11.8922 42.2142C11.9291 43.6764 13.199 44.2763 14.2586 44.0254L14.7337 44.5004V48.096C14.3593 47.7406 6.34411 40.7088 6.34411 40.5776L11.6158 35.3059C11.7928 35.1288 11.8934 34.8881 11.8934 34.6359V29.4267L15.303 26.8692C15.5412 26.6908 15.6813 26.4106 15.6813 26.1113V24.0442C18.6451 22.987 17.9179 18.5611 14.735 18.5356C11.5521 18.5611 10.8236 22.987 13.7874 24.0442V25.6388L10.3778 28.1963C10.1396 28.3746 9.99951 28.6548 9.99951 28.9541V34.2449L5.12903 39.1154C3.55861 36.9973 2.65304 34.4372 2.39958 31.7957H4.52404L4.71127 32.5446C3.74711 33.7125 4.68071 35.6319 6.21037 35.5835C8.53608 35.5619 8.76916 32.1663 6.48294 31.8224C6.27023 31.1385 6.25877 29.8826 5.26404 29.9005H2.14612L1.76784 27.0589H7.15798C7.68145 27.0589 8.10558 26.6348 8.10558 26.1113V20.0971L16.0672 16.5589C17.1932 16.0367 16.4455 14.3402 15.2967 14.828L6.77333 18.6158C6.43072 18.7687 6.21037 19.1075 6.21037 19.4806V25.1637H1.51566L0.999824 21.2969L2.88484 19.4119C5.64996 20.0232 6.20018 15.8278 3.37011 15.6928C2.14994 15.6737 1.20106 16.8989 1.54622 18.072L0.68523 18.933L0 13.7988H12.8411C13.3645 13.7988 13.7874 13.3747 13.7874 12.8512V8.11577C13.767 6.87268 11.9138 6.87013 11.8934 8.11577V11.9049H2.88866C6.81791 9.90144 10.6121 7.41908 14.3389 4.42979L16.6289 7.48531V12.8512C16.6493 14.0943 18.5025 14.0982 18.5229 12.8512V7.16944C18.5229 6.96438 18.4566 6.76441 18.3331 6.60139L15.8049 3.22746C17.0148 2.20853 18.2184 1.13101 19.4182 0C20.8104 1.55259 22.27 3.00202 23.7984 4.34318L20.6944 7.4471C20.5174 7.62414 20.4168 7.86486 20.4168 8.11577V10.9573C20.4384 12.2017 22.2903 12.2029 22.312 10.9573V8.50806L25.2465 5.57227C26.4387 6.53898 27.6741 7.43309 28.9414 8.2737V17.8516L23.9066 19.5303C23.5207 19.659 23.2596 20.0207 23.2596 20.4283V28.9516C23.2596 29.2917 23.4417 29.6063 23.7372 29.7744L29.889 33.291V43.0485L29.8865 43.0497ZM35.0919 29.079L28.4612 25.2898C27.371 24.6899 26.4501 26.2986 27.5225 26.9354L33.6743 30.4507V31.7957C33.6743 32.2032 33.9354 32.5662 34.3226 32.6936L36.2981 33.3534C35.7198 36.4458 34.1418 39.2721 31.7804 41.3685V32.7433C31.7804 32.4032 31.5983 32.0899 31.3028 31.9205L25.151 28.4052V21.1135L30.1858 19.4348C30.573 19.3062 30.8341 18.9444 30.8341 18.5369V9.48878C33.0502 10.8134 35.3798 11.9393 37.801 12.8945L33.3011 14.8254C32.9534 14.9744 32.728 15.317 32.728 15.6953V20.6957L27.6932 22.3744C26.6845 22.6966 26.9468 24.2365 27.9925 24.2199C28.0906 24.2199 28.1925 24.2047 28.2918 24.1715L33.9736 22.2776C34.3608 22.1477 34.6219 21.786 34.6219 21.3784V16.3207L38.8441 14.5095L37.5488 24.2199H35.3084C35.0231 23.6914 34.4818 23.2927 33.6743 23.2736C31.1754 23.336 31.1767 26.9991 33.6743 27.0615C34.4806 27.0411 35.0219 26.6437 35.3084 26.1139H37.2966L36.5846 31.4531L35.5683 31.1143C35.525 30.5195 35.7771 29.405 35.0906 29.0802L35.0919 29.079Z" fill="#3D42DF"/>
+          </svg>
+          <span>Trap-intell</span>
+        </a>
+
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            Dashboard
+          </a>
+          <a href="honeypots.html" class="nav-item active">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Honeypots
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+            Attacks
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            Alerts
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Threat Actors
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            Reports
+          </a>
+        </nav>
+
+        <div class="sidebar-upgrade">
+          <div class="upgrade-illustration">
+            <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="20" width="80" height="52" rx="6" fill="#4044e4" opacity="0.15"/>
+              <rect x="34" y="24" width="72" height="44" rx="4" fill="#fff" stroke="#c5c8f5" stroke-width="1"/>
+              <rect x="42" y="50" width="8" height="12" rx="2" fill="#4044e4" opacity="0.4"/>
+              <rect x="54" y="44" width="8" height="18" rx="2" fill="#4044e4" opacity="0.6"/>
+              <rect x="66" y="36" width="8" height="26" rx="2" fill="#4044e4"/>
+              <rect x="78" y="40" width="8" height="22" rx="2" fill="#4044e4" opacity="0.7"/>
+              <rect x="90" y="46" width="8" height="16" rx="2" fill="#4044e4" opacity="0.5"/>
+              <polyline points="42,56 56,50 68,40 80,44 92,52" stroke="#8a1bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+              <rect x="62" y="72" width="16" height="4" rx="2" fill="#c5c8f5"/>
+              <rect x="54" y="76" width="32" height="3" rx="1.5" fill="#c5c8f5"/>
+              <circle cx="120" cy="28" r="3" fill="#feca2f" opacity="0.8"/>
+              <circle cx="128" cy="20" r="2" fill="#feca2f" opacity="0.5"/>
+              <circle cx="128" cy="49" r="7" fill="#8a1bfa" opacity="0.15"/>
+              <circle cx="128" cy="46" r="4" fill="#8a1bfa" opacity="0.5"/>
+            </svg>
+          </div>
+          <button class="btn-upgrade">Upgrade for Free</button>
+        </div>
+
+        <div class="sidebar-user">
+          <div class="user-avatar">JN</div>
+          <div class="user-info">
+            <div class="user-greeting">Welcome back 👋</div>
+            <div class="user-name">Johnathan</div>
+          </div>
+          <svg class="user-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+      </aside>
+
+      <!-- ══════════════════════════════
+           MAIN AREA
+      ══════════════════════════════ -->
+      <div class="main-area">
+
+        <!-- Topbar -->
+        <header class="topbar">
+          <button class="topbar-hamburger" id="hamburgerBtn" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="topbar-search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="Search IPs, Threats, or Honeypots..." />
+          </div>
+          <div class="topbar-right">
+            <div class="org-indicator">
+              <span class="org-dot"></span>
+              CyberCorp HQ
+            </div>
+            <button class="topbar-notif" aria-label="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+              <span class="notif-badge"></span>
+            </button>
+            <div class="topbar-divider"></div>
+            <div class="topbar-profile">
+              <div class="profile-info">
+                <span class="profile-name">Johnathan</span>
+                <span class="profile-role">5sec_9Ps</span>
+              </div>
+              <div class="profile-avatar">JN</div>
+            </div>
+          </div>
+        </header>
+
+        <!-- Page Content -->
+        <main class="dashboard-content">
+
+          <!-- Page Header -->
+          <div class="page-header">
+            <div class="page-header-left">
+              <h1>Honeypots Management</h1>
+              <p>Manage, deploy, and monitor your deception nodes.</p>
+            </div>
+            <div class="page-header-actions">
+              <button class="btn-deploy" id="deployBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+                Deploy New Trap
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats (3 cards) -->
+          <div class="stats-grid honeypot-stats">
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Active Threat Actors</span>
+                <div class="stat-icon purple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4044e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-value">8</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend up">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+1
+                </span>
+                <span class="stat-meta">3 New Detected</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Total Attacks (24h)</span>
+                <div class="stat-icon green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ace5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-value">1,245</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend up">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+5.2%
+                </span>
+                <span class="stat-meta">12% Critical</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Active Honeypots</span>
+                <div class="stat-icon orange">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-value">15/15</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend stable">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>Stable
+                </span>
+                <span class="stat-meta">100% Health Score</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Honeypot Search -->
+          <div class="honeypot-search-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input class="honeypot-search-input" type="text" id="honeypotSearch" placeholder="Search honeypots by Name, IP or Type..." />
+            <button class="search-filter-btn" aria-label="Filter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="6" x2="20" y2="6"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
+                <line x1="11" y1="18" x2="13" y2="18"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Honeypots Grid -->
+          <div class="honeypots-grid" id="honeypotsGrid"></div>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Assistant">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <path d="M8 21h8M12 17v4"/>
+        <circle cx="9" cy="10" r="1" fill="currentColor"/>
+        <circle cx="15" cy="10" r="1" fill="currentColor"/>
+        <path d="M9 13c0 0 1 1 3 1s3-1 3-1"/>
+      </svg>
+    </button>
+
+
+    <!-- ══════════════════════════════════════
+         MODAL 1 — DEPLOY NEW HONEYPOT
+         Opens: "Deploy New Trap" button
+         Closes: Cancel button
+    ══════════════════════════════════════ -->
+    <div class="modal-overlay hidden" id="deployOverlay">
+      <div class="modal-card">
+
+        <div class="modal-header">
+          <h3 class="modal-title">Deploy New Honeypot</h3>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-field">
+            <label for="trapName">Honeypot Name</label>
+            <input type="text" id="trapName" placeholder="e.g. Finance-Trap-01" autocomplete="off" />
+          </div>
+          <div class="modal-field">
+            <label for="trapType">Type</label>
+            <input type="text" id="trapType" placeholder="" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="modal-btn-row">
+          <button class="modal-btn-cancel" id="deployCancelBtn">Cancel</button>
+          <button class="btn-deploy" id="deployConfirmBtn">Deploy Node</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════
+         MODAL 2 — SYSTEM LOGS
+         Opens: "View Logs" on each honeypot card
+         Closes: X button or Close button
+    ══════════════════════════════════════ -->
+    <div class="modal-overlay hidden" id="logsOverlay">
+      <div class="modal-card modal-card--logs">
+
+        <div class="modal-header">
+          <h3 class="modal-title" id="logsModalTitle">System Logs - Finance-DB-Trap</h3>
+          <button class="modal-close-x" id="logsCloseX" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="logs-terminal" id="logsTerminal"></div>
+
+        <div class="modal-footer">
+          <button class="modal-btn-cancel" id="logsCloseBtn">Close</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <style>
+      /* ── Shared Modal Overlay ── */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(17, 19, 38, 0.42);
+        backdrop-filter: blur(3px);
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        animation: fadeInOverlay 0.18s ease both;
+      }
+      .modal-overlay.hidden { display: none; }
+
+      @keyframes fadeInOverlay {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      /* ── Modal Card ── */
+      .modal-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 26px 26px 22px;
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow:
+          0 2px 12px rgba(0,0,0,0.06),
+          0 20px 56px rgba(0,0,0,0.16);
+        animation: riseUp 0.26s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+
+      /* Logs modal slightly wider */
+      .modal-card--logs {
+        max-width: 480px;
+        gap: 16px;
+      }
+
+      /* ── Modal Header ── */
+      .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .modal-title {
+        font-size: 0.97rem;
+        font-weight: 700;
+        color: var(--clr-dark-navy);
+        letter-spacing: -0.2px;
+      }
+
+      /* X close button (logs modal only) */
+      .modal-close-x {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--clr-text-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        border-radius: 7px;
+        flex-shrink: 0;
+        transition: background 0.15s, color 0.15s;
+      }
+      .modal-close-x:hover {
+        background: #f4f5fa;
+        color: var(--clr-dark-navy);
+      }
+
+      /* ── Modal Body (deploy form) ── */
+      .modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .modal-field {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .modal-field label {
+        font-size: 0.71rem;
+        font-weight: 700;
+        color: var(--clr-text-muted);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .modal-field input {
+        border: 1.5px solid #c8cce0;
+        border-radius: 8px;
+        padding: 11px 14px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 0.88rem;
+        color: var(--clr-dark-navy);
+        background: transparent;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .modal-field input:focus {
+        border-color: var(--clr-blue-purple);
+        box-shadow: 0 0 0 3px var(--clr-blue-purple-10);
+      }
+      .modal-field input::placeholder { color: #aab0c6; }
+
+      /* ── Deploy modal buttons row ── */
+      .modal-btn-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 2px;
+      }
+
+      /* Cancel — plain text style matching screenshot */
+      .modal-btn-cancel {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--clr-text-muted);
+        padding: 8px 14px;
+        border-radius: 8px;
+        transition: color 0.15s, background 0.15s;
+      }
+      .modal-btn-cancel:hover {
+        color: var(--clr-dark-navy);
+        background: #f4f5fa;
+      }
+
+      /* ── Logs modal footer ── */
+      .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 8px;
+        border-top: 1px solid #f0f1f7;
+      }
+
+      /* ── Terminal output area ── */
+      .logs-terminal {
+        background: #f8f9fc;
+        border: 1px solid #e8eaf0;
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.77rem;
+        line-height: 1.9;
+        color: var(--clr-dark-navy);
+        min-height: 160px;
+        max-height: 280px;
+        overflow-y: auto;
+      }
+
+      .logs-terminal::-webkit-scrollbar { width: 4px; }
+      .logs-terminal::-webkit-scrollbar-track { background: transparent; }
+      .logs-terminal::-webkit-scrollbar-thumb { background: #d0d3e8; border-radius: 4px; }
+
+      /* Log line types */
+      .log-line         { display: block; }
+      .log-line--info   { color: #2c3e50; }
+      .log-line--danger { color: #c0392b; }
+      .log-line--warn   { color: #b7770d; }
+      .log-line--blue   { color: #2563eb; }
+
+      /* Blinking cursor */
+      .log-cursor {
+        display: inline-block;
+        width: 6px;
+        height: 12px;
+        background: var(--clr-blue-purple);
+        margin-left: 3px;
+        vertical-align: middle;
+        border-radius: 1px;
+        animation: blink 1.1s step-end infinite;
+      }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    </style>
+
+
+    <script>
+      /* ════════════════ DATA ════════════════ */
+      const honeypots = [
+        { name:'Finance-DB-Trap', type:'Database', ip:'192.168.1.50', logs:'2.4k', status:'active' },
+        { name:'Finance-DB-Trap', type:'Database', ip:'192.168.1.51', logs:'2.4k', status:'active' },
+        { name:'Finance-DB-Trap', type:'Database', ip:'192.168.1.52', logs:'2.4k', status:'active' },
+        { name:'Finance-DB-Trap', type:'Database', ip:'192.168.1.53', logs:'2.4k', status:'active' },
+        { name:'Finance-DB-Trap', type:'Database', ip:'192.168.1.54', logs:'2.4k', status:'active' },
+        { name:'Finance-DB-Trap', type:'Database', ip:'192.168.1.55', logs:'2.4k', status:'active' },
+      ];
+
+      function getLogsFor(hp) {
+        return [
+          { cls:'log-line--info',   text:`[2023-10-27 14:28:01] System initialized.` },
+          { cls:'log-line--info',   text:`[2023-10-27 14:21:15] Listening on port 22 (SSH)...` },
+          { cls:'log-line--danger', text:`[2023-10-27 14:30:12] SSH connection from 45.33.22.11:1905 \u2014 ${hp.ip}... BLOCKED` },
+          { cls:'log-line--warn',   text:`[2023-10-27 14:30:15] Honeypot trigger: /admin access attempt.` },
+          { cls:'log-line--blue',   text:`[2023-10-27 14:30:38] Data Capture: Payload saved to /logs/capture_21.pcap` },
+        ];
+      }
+
+      /* ════════════════ RENDER CARDS ════════════════ */
+      function renderHoneypots(data) {
+        const grid = document.getElementById('honeypotsGrid');
+        grid.innerHTML = '';
+
+        if (!data.length) {
+          grid.innerHTML = `
+            <div style="grid-column:1/-1;text-align:center;padding:64px 0;color:var(--clr-text-muted);">
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 12px;display:block;opacity:0.3;">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <p style="font-size:0.9rem;font-weight:600;">No honeypots found</p>
+            </div>`;
+          return;
+        }
+
+        data.forEach((hp, i) => {
+          const statusClass = hp.status === 'active'  ? 'badge-active'
+                            : hp.status === 'warning' ? 'badge-warning'
+                            : 'badge-inactive';
+          const statusLabel = hp.status.charAt(0).toUpperCase() + hp.status.slice(1);
+
+          const card = document.createElement('div');
+          card.className = 'honeypot-card';
+          card.style.animationDelay = `${i * 0.05 + 0.04}s`;
+          card.innerHTML = `
+            <div class="honeypot-card-top">
+              <span class="honeypot-name">${hp.name}</span>
+              <span class="badge-status ${statusClass}">${statusLabel}</span>
+            </div>
+            <span class="honeypot-type">${hp.type}</span>
+            <div class="honeypot-divider"></div>
+            <div class="honeypot-meta">
+              <div class="meta-item">
+                <span class="meta-label">iP Address</span>
+                <span class="meta-value">${hp.ip}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Logs Collected</span>
+                <span class="meta-value">${hp.logs}</span>
+              </div>
+            </div>
+            <button class="btn-view-logs" data-index="${i}">View Logs</button>
+          `;
+          grid.appendChild(card);
+        });
+
+        /* Wire "View Logs" after render */
+        document.querySelectorAll('.btn-view-logs').forEach(btn => {
+          btn.addEventListener('click', () => openLogsModal(data[parseInt(btn.dataset.index, 10)]));
+        });
+      }
+
+      /* ════════════════ LIVE SEARCH ════════════════ */
+      document.getElementById('honeypotSearch').addEventListener('input', function () {
+        const q = this.value.toLowerCase();
+        renderHoneypots(honeypots.filter(hp =>
+          hp.name.toLowerCase().includes(q) ||
+          hp.ip.toLowerCase().includes(q)   ||
+          hp.type.toLowerCase().includes(q)
+        ));
+      });
+
+      /* ════════════════ MODAL 1 — DEPLOY ════════════════ */
+      const deployOverlay    = document.getElementById('deployOverlay');
+      const deployBtn        = document.getElementById('deployBtn');
+      const deployCancelBtn  = document.getElementById('deployCancelBtn');
+      const deployConfirmBtn = document.getElementById('deployConfirmBtn');
+
+      function openDeploy()  { deployOverlay.classList.remove('hidden'); }
+      function closeDeploy() {
+        deployOverlay.classList.add('hidden');
+        document.getElementById('trapName').value = '';
+        document.getElementById('trapType').value = '';
+        clearFieldError('trapName');
+        clearFieldError('trapType');
+      }
+
+      deployBtn.addEventListener('click', openDeploy);
+      deployCancelBtn.addEventListener('click', closeDeploy);
+      deployOverlay.addEventListener('click', e => { if (e.target === deployOverlay) closeDeploy(); });
+
+      deployConfirmBtn.addEventListener('click', () => {
+        const name = document.getElementById('trapName').value.trim();
+        const type = document.getElementById('trapType').value.trim();
+        let valid = true;
+        if (!name) { setFieldError('trapName'); valid = false; }
+        if (!type) { setFieldError('trapType'); valid = false; }
+        if (!valid) return;
+
+        honeypots.unshift({
+          name, type,
+          ip: `192.168.1.${Math.floor(Math.random() * 200 + 10)}`,
+          logs: '0',
+          status: 'active',
+        });
+        renderHoneypots(honeypots);
+        closeDeploy();
+      });
+
+      function setFieldError(id) {
+        const el = document.getElementById(id);
+        el.style.borderColor = '#e74c3c';
+        el.style.boxShadow   = '0 0 0 3px rgba(231,76,60,0.13)';
+        el.animate([
+          {transform:'translateX(0)'},{transform:'translateX(-5px)'},
+          {transform:'translateX(5px)'},{transform:'translateX(-3px)'},
+          {transform:'translateX(0)'},
+        ], {duration:300, easing:'ease-out'});
+        el.addEventListener('input', () => clearFieldError(id), {once:true});
+      }
+
+      function clearFieldError(id) {
+        const el = document.getElementById(id);
+        el.style.borderColor = '';
+        el.style.boxShadow   = '';
+      }
+
+      /* ════════════════ MODAL 2 — SYSTEM LOGS ════════════════ */
+      const logsOverlay  = document.getElementById('logsOverlay');
+      const logsCloseX   = document.getElementById('logsCloseX');
+      const logsCloseBtn = document.getElementById('logsCloseBtn');
+
+      function openLogsModal(hp) {
+        document.getElementById('logsModalTitle').textContent = `System Logs - ${hp.name}`;
+
+        const terminal = document.getElementById('logsTerminal');
+        terminal.innerHTML = '';
+
+        getLogsFor(hp).forEach((line, i) => {
+          const span = document.createElement('span');
+          span.className = `log-line ${line.cls}`;
+          span.textContent = line.text;
+          span.style.opacity = '0';
+          span.style.transition = `opacity 0.22s ease ${i * 0.07}s`;
+          terminal.appendChild(span);
+          requestAnimationFrame(() =>
+            requestAnimationFrame(() => { span.style.opacity = '1'; })
+          );
+        });
+
+        /* blinking cursor */
+        const cursor = document.createElement('span');
+        cursor.className = 'log-cursor';
+        terminal.appendChild(cursor);
+
+        logsOverlay.classList.remove('hidden');
+        setTimeout(() => { terminal.scrollTop = terminal.scrollHeight; }, 50);
+      }
+
+      function closeLogs() { logsOverlay.classList.add('hidden'); }
+
+      logsCloseX.addEventListener('click', closeLogs);
+      logsCloseBtn.addEventListener('click', closeLogs);
+      logsOverlay.addEventListener('click', e => { if (e.target === logsOverlay) closeLogs(); });
+
+      /* ════════════════ SIDEBAR TOGGLE ════════════════ */
+      document.getElementById('hamburgerBtn').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('open');
+      });
+
+      /* ════════════════ INIT ════════════════ */
+      renderHoneypots(honeypots);
+    </script>
+  </body>
+</html>

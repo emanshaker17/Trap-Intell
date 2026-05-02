@@ -1,0 +1,485 @@
+/* =========================================
+   alerts.css — Trap-Intell Alerts Center
+   Shell styles (sidebar/topbar) → dashboard.css
+   ========================================= */
+
+/* ── Configure Rules Button ── */
+.btn-configure {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--clr-blue-purple);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.87rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(64, 68, 228, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+.btn-configure:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(64, 68, 228, 0.45);
+}
+
+/* ── Two-column layout ── */
+.alerts-main-row {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ════════════════════════════════
+   ALERT CARDS
+════════════════════════════════ */
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alert-card {
+  background: #fff;
+  border: 1.5px solid #e8eaf0;
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  animation: riseUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  overflow: hidden;
+}
+
+.alert-card:hover {
+  box-shadow: 0 6px 28px rgba(64, 68, 228, 0.08);
+  border-color: rgba(64, 68, 228, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Top row: icon + info + badge */
+.alert-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.alert-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(231, 76, 60, 0.08);
+  border: 1.5px solid rgba(231, 76, 60, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #e74c3c;
+}
+
+.alert-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--clr-dark-navy);
+  letter-spacing: -0.2px;
+  line-height: 1.3;
+}
+
+.alert-target {
+  font-size: 0.82rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+/* Severity badge */
+.alert-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-critical {
+  background: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+  border: 1px solid rgba(231, 76, 60, 0.25);
+}
+
+.badge-high {
+  background: rgba(243, 156, 18, 0.1);
+  color: #b7770d;
+  border: 1px solid rgba(243, 156, 18, 0.25);
+}
+
+.badge-medium {
+  background: rgba(52, 152, 219, 0.1);
+  color: #1a6fa8;
+  border: 1px solid rgba(52, 152, 219, 0.25);
+}
+
+/* Footer row: time + actions */
+.alert-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 0;
+}
+
+.alert-time {
+  font-size: 0.78rem;
+  color: #aab0c6;
+  font-weight: 500;
+}
+
+.alert-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  padding: 0;
+  transition: color 0.15s;
+}
+
+.btn-dismiss:hover { color: var(--clr-dark-navy); }
+
+.btn-investigate {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--clr-blue-purple);
+  padding: 0;
+  transition: opacity 0.15s;
+}
+
+.btn-investigate:hover { opacity: 0.75; }
+
+/* Dismiss animation */
+.alert-card.dismissed {
+  opacity: 0.4;
+  pointer-events: none;
+  transform: scale(0.98);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* ════════════════════════════════
+   ACTIVE RULES PANEL
+════════════════════════════════ */
+.active-rules-panel {
+  background: #fff;
+  border: 1.5px solid #e8eaf0;
+  border-radius: 16px;
+  padding: 22px 20px 20px;
+  animation: riseUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.rules-panel-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--clr-text-muted);
+  letter-spacing: -0.2px;
+  margin-bottom: 14px;
+}
+
+.active-rule-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f4f5fa;
+}
+
+.active-rule-item:last-child { border-bottom: none; }
+
+.rule-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2ace5f;
+  flex-shrink: 0;
+}
+
+.rule-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--clr-dark-navy);
+}
+
+/* ════════════════════════════════
+   TOAST NOTIFICATION
+════════════════════════════════ */
+.save-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--clr-dark-navy);
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 300;
+  white-space: nowrap;
+}
+
+.save-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ════════════════════════════════
+   MODAL OVERLAY
+════════════════════════════════ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 19, 38, 0.42);
+  backdrop-filter: blur(3px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeInOverlay 0.18s ease both;
+}
+
+.modal-overlay.hidden { display: none; }
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ════════════════════════════════
+   DETECTION RULES MODAL CARD
+   — matches screenshot exactly
+════════════════════════════════ */
+.rules-modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 28px 24px;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.07),
+    0 24px 64px rgba(0, 0, 0, 0.18);
+  animation: riseUp 0.26s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Modal title row */
+.rules-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.rules-modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-dark-navy);
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+.rules-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--clr-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.rules-modal-close:hover {
+  background: #f4f5fa;
+  color: var(--clr-dark-navy);
+}
+
+/* List of rule rows */
+.rules-modal-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+/* Single rule row */
+.rule-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f1f7;
+}
+
+.rule-row:last-child { border-bottom: none; }
+
+/* ── Circle indicator (left side) ── */
+.rule-indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #d0d3e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+/* Green ring when ON */
+.rule-indicator.on {
+  border-color: #2ace5f;
+  border-width: 2.5px;
+}
+
+/* Green filled dot inside when ON */
+.rule-indicator-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.rule-indicator.on .rule-indicator-dot {
+  background: #2ace5f;
+}
+
+/* Rule label */
+.rule-row-name {
+  flex: 1;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--clr-dark-navy);
+  line-height: 1.3;
+}
+
+/* ── iOS Toggle Switch ── */
+.toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 26px;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Track */
+.toggle-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: #d0d3e8;
+  transition: background 0.25s ease;
+}
+
+.toggle-switch input:checked ~ .toggle-track {
+  background: #2ace5f;
+}
+
+/* Thumb */
+.toggle-thumb {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.toggle-switch input:checked ~ .toggle-thumb {
+  transform: translateX(18px);
+}
+
+/* ── Save Configuration Button ── */
+.btn-save-config {
+  width: 100%;
+  padding: 15px 24px;
+  background: var(--clr-blue-purple);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(64, 68, 228, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+  margin-top: 4px;
+}
+
+.btn-save-config:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(64, 68, 228, 0.45);
+}
+
+.btn-save-config:active { transform: translateY(0); }
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .alerts-main-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .alert-card-top { flex-wrap: wrap; }
+  .alert-badge { order: -1; margin-left: auto; }
+  .rules-modal-card { padding: 22px 20px 20px; }
+}

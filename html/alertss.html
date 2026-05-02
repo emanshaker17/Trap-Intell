@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerts - Trap-intell</title>
+    <link rel="icon" type="image/png" href="../Images/logo.png" />
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/alertss.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+
+      <!-- ══════════════════════════════
+           SIDEBAR
+      ══════════════════════════════ -->
+      <aside class="sidebar" id="sidebar">
+        <a href="Home.html" class="sidebar-logo">
+          <svg width="30" height="30" viewBox="0 0 39 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.8865 43.0497L27.0449 45.5729V37.4788C27.0449 37.1731 26.8972 36.8852 26.6475 36.7082L20.4142 32.2555V18.1751L23.1832 16.7919C24.8886 18.5279 28.0486 17.2135 27.9925 14.749C27.8499 10.7675 21.9668 11.1331 22.3451 15.0929L19.0451 16.7435C18.7241 16.904 18.5216 17.2314 18.5216 17.5905V32.7446C18.5216 33.049 18.6693 33.3368 18.919 33.5151L25.1523 37.9666V47.2554L22.3107 49.7785V38.4264C22.3107 37.9042 21.8866 37.48 21.3631 37.48H15.6813V33.4285C17.3333 32.5255 16.6429 29.8674 14.7337 29.903C12.8245 29.8674 12.1342 32.5268 13.7861 33.4285V38.4264C13.7861 38.9498 14.2102 39.374 14.7337 39.374H20.4168V51.4597L19.4692 52.3003L16.6276 49.7772V44.1082C16.6837 43.5719 15.9144 43.051 15.6125 42.7008C15.6507 42.5505 15.6762 42.39 15.6813 42.2142C15.6176 39.7166 11.9559 39.7153 11.8922 42.2142C11.9291 43.6764 13.199 44.2763 14.2586 44.0254L14.7337 44.5004V48.096C14.3593 47.7406 6.34411 40.7088 6.34411 40.5776L11.6158 35.3059C11.7928 35.1288 11.8934 34.8881 11.8934 34.6359V29.4267L15.303 26.8692C15.5412 26.6908 15.6813 26.4106 15.6813 26.1113V24.0442C18.6451 22.987 17.9179 18.5611 14.735 18.5356C11.5521 18.5611 10.8236 22.987 13.7874 24.0442V25.6388L10.3778 28.1963C10.1396 28.3746 9.99951 28.6548 9.99951 28.9541V34.2449L5.12903 39.1154C3.55861 36.9973 2.65304 34.4372 2.39958 31.7957H4.52404L4.71127 32.5446C3.74711 33.7125 4.68071 35.6319 6.21037 35.5835C8.53608 35.5619 8.76916 32.1663 6.48294 31.8224C6.27023 31.1385 6.25877 29.8826 5.26404 29.9005H2.14612L1.76784 27.0589H7.15798C7.68145 27.0589 8.10558 26.6348 8.10558 26.1113V20.0971L16.0672 16.5589C17.1932 16.0367 16.4455 14.3402 15.2967 14.828L6.77333 18.6158C6.43072 18.7687 6.21037 19.1075 6.21037 19.4806V25.1637H1.51566L0.999824 21.2969L2.88484 19.4119C5.64996 20.0232 6.20018 15.8278 3.37011 15.6928C2.14994 15.6737 1.20106 16.8989 1.54622 18.072L0.68523 18.933L0 13.7988H12.8411C13.3645 13.7988 13.7874 13.3747 13.7874 12.8512V8.11577C13.767 6.87268 11.9138 6.87013 11.8934 8.11577V11.9049H2.88866C6.81791 9.90144 10.6121 7.41908 14.3389 4.42979L16.6289 7.48531V12.8512C16.6493 14.0943 18.5025 14.0982 18.5229 12.8512V7.16944C18.5229 6.96438 18.4566 6.76441 18.3331 6.60139L15.8049 3.22746C17.0148 2.20853 18.2184 1.13101 19.4182 0C20.8104 1.55259 22.27 3.00202 23.7984 4.34318L20.6944 7.4471C20.5174 7.62414 20.4168 7.86486 20.4168 8.11577V10.9573C20.4384 12.2017 22.2903 12.2029 22.312 10.9573V8.50806L25.2465 5.57227C26.4387 6.53898 27.6741 7.43309 28.9414 8.2737V17.8516L23.9066 19.5303C23.5207 19.659 23.2596 20.0207 23.2596 20.4283V28.9516C23.2596 29.2917 23.4417 29.6063 23.7372 29.7744L29.889 33.291V43.0485L29.8865 43.0497ZM35.0919 29.079L28.4612 25.2898C27.371 24.6899 26.4501 26.2986 27.5225 26.9354L33.6743 30.4507V31.7957C33.6743 32.2032 33.9354 32.5662 34.3226 32.6936L36.2981 33.3534C35.7198 36.4458 34.1418 39.2721 31.7804 41.3685V32.7433C31.7804 32.4032 31.5983 32.0899 31.3028 31.9205L25.151 28.4052V21.1135L30.1858 19.4348C30.573 19.3062 30.8341 18.9444 30.8341 18.5369V9.48878C33.0502 10.8134 35.3798 11.9393 37.801 12.8945L33.3011 14.8254C32.9534 14.9744 32.728 15.317 32.728 15.6953V20.6957L27.6932 22.3744C26.6845 22.6966 26.9468 24.2365 27.9925 24.2199C28.0906 24.2199 28.1925 24.2047 28.2918 24.1715L33.9736 22.2776C34.3608 22.1477 34.6219 21.786 34.6219 21.3784V16.3207L38.8441 14.5095L37.5488 24.2199H35.3084C35.0231 23.6914 34.4818 23.2927 33.6743 23.2736C31.1754 23.336 31.1767 26.9991 33.6743 27.0615C34.4806 27.0411 35.0219 26.6437 35.3084 26.1139H37.2966L36.5846 31.4531L35.5683 31.1143C35.525 30.5195 35.7771 29.405 35.0906 29.0802L35.0919 29.079Z" fill="#3D42DF"/>
+          </svg>
+          <span>Trap-intell</span>
+        </a>
+
+        <!-- Navigation — ALERTS active -->
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>
+            </svg>
+            Dashboard
+          </a>
+          <a href="honeypots.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Honeypots
+          </a>
+          <a href="attacks.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+            Attacks
+          </a>
+          <a href="alerts.html" class="nav-item active">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            Alerts
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Threat Actors
+          </a>
+          <a href="#" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+            Reports
+          </a>
+        </nav>
+
+        <!-- Upgrade Banner -->
+        <div class="sidebar-upgrade">
+          <div class="upgrade-illustration">
+            <svg viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="30" y="20" width="80" height="52" rx="6" fill="#4044e4" opacity="0.15"/>
+              <rect x="34" y="24" width="72" height="44" rx="4" fill="#fff" stroke="#c5c8f5" stroke-width="1"/>
+              <rect x="42" y="50" width="8" height="12" rx="2" fill="#4044e4" opacity="0.4"/>
+              <rect x="54" y="44" width="8" height="18" rx="2" fill="#4044e4" opacity="0.6"/>
+              <rect x="66" y="36" width="8" height="26" rx="2" fill="#4044e4"/>
+              <rect x="78" y="40" width="8" height="22" rx="2" fill="#4044e4" opacity="0.7"/>
+              <rect x="90" y="46" width="8" height="16" rx="2" fill="#4044e4" opacity="0.5"/>
+              <polyline points="42,56 56,50 68,40 80,44 92,52" stroke="#8a1bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+              <rect x="62" y="72" width="16" height="4" rx="2" fill="#c5c8f5"/>
+              <rect x="54" y="76" width="32" height="3" rx="1.5" fill="#c5c8f5"/>
+              <circle cx="120" cy="28" r="3" fill="#feca2f" opacity="0.8"/>
+              <circle cx="128" cy="20" r="2" fill="#feca2f" opacity="0.5"/>
+              <circle cx="128" cy="49" r="7" fill="#8a1bfa" opacity="0.15"/>
+              <circle cx="128" cy="46" r="4" fill="#8a1bfa" opacity="0.5"/>
+            </svg>
+          </div>
+          <button class="btn-upgrade">Upgrade for Free</button>
+        </div>
+
+        <div class="sidebar-user">
+          <div class="user-avatar">JN</div>
+          <div class="user-info">
+            <div class="user-greeting">Welcome back 👋</div>
+            <div class="user-name">Johnathan</div>
+          </div>
+          <svg class="user-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+      </aside>
+
+      <!-- ══════════════════════════════
+           MAIN AREA
+      ══════════════════════════════ -->
+      <div class="main-area">
+
+        <!-- Topbar -->
+        <header class="topbar">
+          <button class="topbar-hamburger" id="hamburgerBtn" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="topbar-search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="Search IPs, Threats, or Honeypots..." />
+          </div>
+          <div class="topbar-right">
+            <div class="org-indicator">
+              <span class="org-dot"></span>
+              CyberCorp HQ
+            </div>
+            <button class="topbar-notif" aria-label="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+              <span class="notif-badge"></span>
+            </button>
+            <div class="topbar-divider"></div>
+            <div class="topbar-profile">
+              <div class="profile-info">
+                <span class="profile-name">Johnathan</span>
+                <span class="profile-role">5sec_9Ps</span>
+              </div>
+              <div class="profile-avatar">JN</div>
+            </div>
+          </div>
+        </header>
+
+        <!-- ── Page Content ── -->
+        <main class="dashboard-content">
+
+          <!-- Page Header -->
+          <div class="page-header">
+            <div class="page-header-left">
+              <h1>Alerts Center</h1>
+              <p>Manage, triage and resolve high-fidelity incidents.</p>
+            </div>
+            <div class="page-header-actions">
+              <button class="btn-configure" id="configureBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="4" y1="6" x2="20" y2="6"/>
+                  <line x1="4" y1="12" x2="20" y2="12"/>
+                  <line x1="4" y1="18" x2="20" y2="18"/>
+                  <circle cx="8" cy="6" r="2" fill="currentColor" stroke="none"/>
+                  <circle cx="16" cy="12" r="2" fill="currentColor" stroke="none"/>
+                  <circle cx="10" cy="18" r="2" fill="currentColor" stroke="none"/>
+                </svg>
+                Configure Rules
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats (3 cards) -->
+          <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Active Threat Actors</span>
+                <div class="stat-icon purple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4044e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-value">8</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend up">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+1
+                </span>
+                <span class="stat-meta">3 New Detected</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Total Attacks (24h)</span>
+                <div class="stat-icon green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ace5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-value">1,245</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend up">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+5.2%
+                </span>
+                <span class="stat-meta">12% Critical</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Active Honeypots</span>
+                <div class="stat-icon orange">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="stat-value">15/15</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend stable">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>Stable
+                </span>
+                <span class="stat-meta">100% Health Score</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alerts + Active Rules -->
+          <div class="alerts-main-row">
+
+            <!-- Alert Cards -->
+            <div class="alerts-list" id="alertsList">
+              <!-- Rendered by JS -->
+            </div>
+
+            <!-- Active Rules Panel -->
+            <div class="active-rules-panel" id="rulesPanel">
+              <div class="rules-panel-title">Active Rules</div>
+              <!-- Rendered by JS -->
+            </div>
+
+          </div>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Assistant">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <path d="M8 21h8M12 17v4"/>
+        <circle cx="9" cy="10" r="1" fill="currentColor"/>
+        <circle cx="15" cy="10" r="1" fill="currentColor"/>
+        <path d="M9 13c0 0 1 1 3 1s3-1 3-1"/>
+      </svg>
+    </button>
+
+
+    <!-- ══════════════════════════════════════
+         MODAL — DETECTION RULES CONFIGURATION
+         Opens: "Configure Rules" button
+         Closes: X button
+    ══════════════════════════════════════ -->
+    <div class="modal-overlay hidden" id="rulesOverlay">
+      <div class="rules-modal-card">
+
+        <div class="rules-modal-header">
+          <h3 class="rules-modal-title">Detection Rules Configuration</h3>
+          <button class="rules-modal-close" id="rulesCloseBtn" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="rules-modal-list" id="rulesModalList">
+          <!-- Rows rendered by JS -->
+        </div>
+
+        <button class="btn-save-config" id="saveConfigBtn">Save Configuration</button>
+
+      </div>
+    </div>
+
+    <!-- Saved toast -->
+    <div class="save-toast" id="saveToast">✓ Configuration saved</div>
+
+
+    <script>
+      /* ══════════════════════════════════
+         DATA
+      ══════════════════════════════════ */
+
+      /* Detection rules — matches screenshot exactly */
+      const rules = [
+        { id: 1, name: 'Root Access Attempt',         enabled: true  },
+        { id: 2, name: 'Ransomware Pattern Detection', enabled: true  },
+        { id: 3, name: 'Data Exfiltration > 100MB',   enabled: true  },
+        { id: 4, name: 'Known Malicious IP Access',    enabled: true  },
+        { id: 5, name: 'Port Scanning Activity',       enabled: false },
+        { id: 6, name: 'Suspicious PowerShell Execution', enabled: false },
+      ];
+
+      /* Alert cards — matches screenshot */
+      const alertsData = [
+        { id: 1, title: 'Suspicious SSH Activity', target: 'Server-01', severity: 'critical', time: '2m ago' },
+        { id: 2, title: 'Suspicious SSH Activity', target: 'Server-02', severity: 'critical', time: '5m ago' },
+        { id: 3, title: 'Suspicious SSH Activity', target: 'Server-03', severity: 'critical', time: '8m ago' },
+      ];
+
+      /* ══════════════════════════════════
+         RENDER ACTIVE RULES PANEL
+      ══════════════════════════════════ */
+      function renderRulesPanel() {
+        const panel = document.getElementById('rulesPanel');
+
+        /* Remove old rule items (keep the title div) */
+        const existing = panel.querySelectorAll('.active-rule-item');
+        existing.forEach(el => el.remove());
+
+        rules
+          .filter(r => r.enabled)
+          .forEach(r => {
+            const item = document.createElement('div');
+            item.className = 'active-rule-item';
+            item.innerHTML = `
+              <span class="rule-dot"></span>
+              <span class="rule-name">${r.name}</span>
+            `;
+            panel.appendChild(item);
+          });
+      }
+
+      /* ══════════════════════════════════
+         RENDER ALERT CARDS
+      ══════════════════════════════════ */
+      function severityBadgeClass(s) {
+        return s === 'critical' ? 'badge-critical'
+             : s === 'high'     ? 'badge-high'
+             : 'badge-medium';
+      }
+
+      function renderAlerts() {
+        const list = document.getElementById('alertsList');
+        list.innerHTML = '';
+
+        alertsData.forEach(alert => {
+          const card = document.createElement('div');
+          card.className = 'alert-card';
+          card.dataset.id = alert.id;
+          card.innerHTML = `
+            <div class="alert-card-top">
+              <div class="alert-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                  <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </div>
+              <div class="alert-card-info">
+                <div class="alert-title">${alert.title}</div>
+                <div class="alert-target">Target: ${alert.target}</div>
+              </div>
+              <span class="alert-badge ${severityBadgeClass(alert.severity)}">${alert.severity}</span>
+            </div>
+            <div class="alert-card-footer">
+              <span class="alert-time">${alert.time}</span>
+              <div class="alert-actions">
+                <button class="btn-dismiss" data-id="${alert.id}">Dismiss</button>
+                <button class="btn-investigate" data-id="${alert.id}">Investigate</button>
+              </div>
+            </div>
+          `;
+          list.appendChild(card);
+        });
+
+        /* Wire dismiss buttons */
+        list.querySelectorAll('.btn-dismiss').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const card = list.querySelector(`.alert-card[data-id="${btn.dataset.id}"]`);
+            if (!card) return;
+            card.classList.add('dismissed');
+            setTimeout(() => {
+              card.style.maxHeight = card.offsetHeight + 'px';
+              requestAnimationFrame(() => {
+                card.style.transition = 'max-height 0.35s ease, margin 0.35s ease, opacity 0.35s ease';
+                card.style.maxHeight  = '0';
+                card.style.marginTop  = '0';
+                card.style.opacity    = '0';
+                card.style.overflow   = 'hidden';
+              });
+              setTimeout(() => card.remove(), 380);
+            }, 200);
+          });
+        });
+
+        /* Wire investigate buttons */
+        list.querySelectorAll('.btn-investigate').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const id   = btn.dataset.id;
+            const info = alertsData.find(a => a.id == id);
+            if (info) alert(`Opening investigation for: ${info.title} → ${info.target}`);
+          });
+        });
+      }
+
+      /* ══════════════════════════════════
+         RENDER RULES MODAL LIST
+      ══════════════════════════════════ */
+      function renderRulesModal() {
+        const list = document.getElementById('rulesModalList');
+        list.innerHTML = '';
+
+        rules.forEach(rule => {
+          const row = document.createElement('div');
+          row.className = 'rule-row';
+
+          /* Unique id for label association */
+          const toggleId = `toggle-${rule.id}`;
+
+          row.innerHTML = `
+            <div class="rule-indicator ${rule.enabled ? 'on' : ''}">
+              <span class="rule-indicator-dot"></span>
+            </div>
+            <span class="rule-row-name">${rule.name}</span>
+            <label class="toggle-switch" aria-label="Toggle ${rule.name}">
+              <input type="checkbox" id="${toggleId}" ${rule.enabled ? 'checked' : ''} />
+              <span class="toggle-track"></span>
+              <span class="toggle-thumb"></span>
+            </label>
+          `;
+
+          /* Sync indicator when toggle changes */
+          const checkbox  = row.querySelector('input[type="checkbox"]');
+          const indicator = row.querySelector('.rule-indicator');
+
+          checkbox.addEventListener('change', () => {
+            rule.enabled = checkbox.checked;
+            indicator.classList.toggle('on', rule.enabled);
+          });
+
+          list.appendChild(row);
+        });
+      }
+
+      /* ══════════════════════════════════
+         MODAL OPEN / CLOSE
+      ══════════════════════════════════ */
+      const rulesOverlay = document.getElementById('rulesOverlay');
+
+      document.getElementById('configureBtn').addEventListener('click', () => {
+        renderRulesModal();
+        rulesOverlay.classList.remove('hidden');
+      });
+
+      document.getElementById('rulesCloseBtn').addEventListener('click', () => {
+        rulesOverlay.classList.add('hidden');
+      });
+
+      rulesOverlay.addEventListener('click', e => {
+        if (e.target === rulesOverlay) rulesOverlay.classList.add('hidden');
+      });
+
+      /* ══════════════════════════════════
+         SAVE CONFIGURATION
+      ══════════════════════════════════ */
+      document.getElementById('saveConfigBtn').addEventListener('click', () => {
+        rulesOverlay.classList.add('hidden');
+        renderRulesPanel(); /* Update the Active Rules panel live */
+        showToast('✓ Configuration saved');
+      });
+
+      function showToast(msg) {
+        const toast = document.getElementById('saveToast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2800);
+      }
+
+      /* ══════════════════════════════════
+         SIDEBAR TOGGLE
+      ══════════════════════════════════ */
+      document.getElementById('hamburgerBtn').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('open');
+      });
+
+      /* ══════════════════════════════════
+         INIT
+      ══════════════════════════════════ */
+      renderAlerts();
+      renderRulesPanel();
+    </script>
+  </body>
+</html>
