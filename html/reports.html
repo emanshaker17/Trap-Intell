@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports - Trap-intell</title>
+    <link rel="icon" type="image/png" href="../Images/logo.png" />
+    <link rel="stylesheet" href="../CSS/utilities.css" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link rel="stylesheet" href="../CSS/reports.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+
+      <!-- ══ SIDEBAR ══ -->
+      <aside class="sidebar" id="sidebar">
+        <a href="Home.html" class="sidebar-logo">
+          <svg width="30" height="30" viewBox="0 0 39 53" fill="none">
+            <path d="M29.8865 43.0497L27.0449 45.5729V37.4788C27.0449 37.1731 26.8972 36.8852 26.6475 36.7082L20.4142 32.2555V18.1751L23.1832 16.7919C24.8886 18.5279 28.0486 17.2135 27.9925 14.749C27.8499 10.7675 21.9668 11.1331 22.3451 15.0929L19.0451 16.7435C18.7241 16.904 18.5216 17.2314 18.5216 17.5905V32.7446C18.5216 33.049 18.6693 33.3368 18.919 33.5151L25.1523 37.9666V47.2554L22.3107 49.7785V38.4264C22.3107 37.9042 21.8866 37.48 21.3631 37.48H15.6813V33.4285C17.3333 32.5255 16.6429 29.8674 14.7337 29.903C12.8245 29.8674 12.1342 32.5268 13.7861 33.4285V38.4264C13.7861 38.9498 14.2102 39.374 14.7337 39.374H20.4168V51.4597L19.4692 52.3003L16.6276 49.7772V44.1082C16.6837 43.5719 15.9144 43.051 15.6125 42.7008C15.6507 42.5505 15.6762 42.39 15.6813 42.2142C15.6176 39.7166 11.9559 39.7153 11.8922 42.2142C11.9291 43.6764 13.199 44.2763 14.2586 44.0254L14.7337 44.5004V48.096C14.3593 47.7406 6.34411 40.7088 6.34411 40.5776L11.6158 35.3059C11.7928 35.1288 11.8934 34.8881 11.8934 34.6359V29.4267L15.303 26.8692C15.5412 26.6908 15.6813 26.4106 15.6813 26.1113V24.0442C18.6451 22.987 17.9179 18.5611 14.735 18.5356C11.5521 18.5611 10.8236 22.987 13.7874 24.0442V25.6388L10.3778 28.1963C10.1396 28.3746 9.99951 28.6548 9.99951 28.9541V34.2449L5.12903 39.1154C3.55861 36.9973 2.65304 34.4372 2.39958 31.7957H4.52404L4.71127 32.5446C3.74711 33.7125 4.68071 35.6319 6.21037 35.5835C8.53608 35.5619 8.76916 32.1663 6.48294 31.8224C6.27023 31.1385 6.25877 29.8826 5.26404 29.9005H2.14612L1.76784 27.0589H7.15798C7.68145 27.0589 8.10558 26.6348 8.10558 26.1113V20.0971L16.0672 16.5589C17.1932 16.0367 16.4455 14.3402 15.2967 14.828L6.77333 18.6158C6.43072 18.7687 6.21037 19.1075 6.21037 19.4806V25.1637H1.51566L0.999824 21.2969L2.88484 19.4119C5.64996 20.0232 6.20018 15.8278 3.37011 15.6928C2.14994 15.6737 1.20106 16.8989 1.54622 18.072L0.68523 18.933L0 13.7988H12.8411C13.3645 13.7988 13.7874 13.3747 13.7874 12.8512V8.11577C13.767 6.87268 11.9138 6.87013 11.8934 8.11577V11.9049H2.88866C6.81791 9.90144 10.6121 7.41908 14.3389 4.42979L16.6289 7.48531V12.8512C16.6493 14.0943 18.5025 14.0982 18.5229 12.8512V7.16944C18.5229 6.96438 18.4566 6.76441 18.3331 6.60139L15.8049 3.22746C17.0148 2.20853 18.2184 1.13101 19.4182 0C20.8104 1.55259 22.27 3.00202 23.7984 4.34318L20.6944 7.4471C20.5174 7.62414 20.4168 7.86486 20.4168 8.11577V10.9573C20.4384 12.2017 22.2903 12.2029 22.312 10.9573V8.50806L25.2465 5.57227C26.4387 6.53898 27.6741 7.43309 28.9414 8.2737V17.8516L23.9066 19.5303C23.5207 19.659 23.2596 20.0207 23.2596 20.4283V28.9516C23.2596 29.2917 23.4417 29.6063 23.7372 29.7744L29.889 33.291V43.0485L29.8865 43.0497ZM35.0919 29.079L28.4612 25.2898C27.371 24.6899 26.4501 26.2986 27.5225 26.9354L33.6743 30.4507V31.7957C33.6743 32.2032 33.9354 32.5662 34.3226 32.6936L36.2981 33.3534C35.7198 36.4458 34.1418 39.2721 31.7804 41.3685V32.7433C31.7804 32.4032 31.5983 32.0899 31.3028 31.9205L25.151 28.4052V21.1135L30.1858 19.4348C30.573 19.3062 30.8341 18.9444 30.8341 18.5369V9.48878C33.0502 10.8134 35.3798 11.9393 37.801 12.8945L33.3011 14.8254C32.9534 14.9744 32.728 15.317 32.728 15.6953V20.6957L27.6932 22.3744C26.6845 22.6966 26.9468 24.2365 27.9925 24.2199C28.0906 24.2199 28.1925 24.2047 28.2918 24.1715L33.9736 22.2776C34.3608 22.1477 34.6219 21.786 34.6219 21.3784V16.3207L38.8441 14.5095L37.5488 24.2199H35.3084C35.0231 23.6914 34.4818 23.2927 33.6743 23.2736C31.1754 23.336 31.1767 26.9991 33.6743 27.0615C34.4806 27.0411 35.0219 26.6437 35.3084 26.1139H37.2966L36.5846 31.4531L35.5683 31.1143C35.525 30.5195 35.7771 29.405 35.0906 29.0802L35.0919 29.079Z" fill="#3D42DF"/>
+          </svg>
+          <span>Trap-intell</span>
+        </a>
+
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+            Dashboard
+          </a>
+          <a href="honeypots.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Honeypots
+          </a>
+          <a href="attacks.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Attacks
+          </a>
+          <a href="alerts.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            Alerts
+          </a>
+          <a href="threat-actors.html" class="nav-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Threat Actors
+          </a>
+          <a href="reports.html" class="nav-item active">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Reports
+          </a>
+        </nav>
+
+        <div class="sidebar-upgrade">
+          <div class="upgrade-illustration">
+            <svg viewBox="0 0 160 100" fill="none">
+              <rect x="30" y="20" width="80" height="52" rx="6" fill="#4044e4" opacity="0.15"/>
+              <rect x="34" y="24" width="72" height="44" rx="4" fill="#fff" stroke="#c5c8f5" stroke-width="1"/>
+              <rect x="42" y="50" width="8" height="12" rx="2" fill="#4044e4" opacity="0.4"/>
+              <rect x="54" y="44" width="8" height="18" rx="2" fill="#4044e4" opacity="0.6"/>
+              <rect x="66" y="36" width="8" height="26" rx="2" fill="#4044e4"/>
+              <rect x="78" y="40" width="8" height="22" rx="2" fill="#4044e4" opacity="0.7"/>
+              <rect x="90" y="46" width="8" height="16" rx="2" fill="#4044e4" opacity="0.5"/>
+              <polyline points="42,56 56,50 68,40 80,44 92,52" stroke="#8a1bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+              <rect x="62" y="72" width="16" height="4" rx="2" fill="#c5c8f5"/>
+              <rect x="54" y="76" width="32" height="3" rx="1.5" fill="#c5c8f5"/>
+              <circle cx="120" cy="28" r="3" fill="#feca2f" opacity="0.8"/>
+              <circle cx="128" cy="49" r="7" fill="#8a1bfa" opacity="0.15"/>
+              <circle cx="128" cy="46" r="4" fill="#8a1bfa" opacity="0.5"/>
+            </svg>
+          </div>
+          <button class="btn-upgrade">Upgrade for Free</button>
+        </div>
+
+        <div class="sidebar-user">
+          <div class="user-avatar">JN</div>
+          <div class="user-info">
+            <div class="user-greeting">Welcome back 👋</div>
+            <div class="user-name">Johnathan</div>
+          </div>
+          <svg class="user-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </aside>
+
+      <!-- ══ MAIN ══ -->
+      <div class="main-area">
+
+        <header class="topbar">
+          <button class="topbar-hamburger" id="hamburgerBtn" aria-label="Toggle sidebar"><span></span><span></span><span></span></button>
+          <div class="topbar-search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" placeholder="Search IPs, Threats, or Honeypots..." />
+          </div>
+          <div class="topbar-right">
+            <div class="org-indicator"><span class="org-dot"></span>CyberCorp HQ</div>
+            <button class="topbar-notif" aria-label="Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              <span class="notif-badge"></span>
+            </button>
+            <div class="topbar-divider"></div>
+            <div class="topbar-profile">
+              <div class="profile-info">
+                <span class="profile-name">Johnathan</span>
+                <span class="profile-role">5sec_9Ps</span>
+              </div>
+              <div class="profile-avatar">JN</div>
+            </div>
+          </div>
+        </header>
+
+        <main class="dashboard-content">
+
+          <!-- Page Header -->
+          <div class="page-header">
+            <div class="page-header-left">
+              <h1>Reports</h1>
+              <p>Generate, download and manage security intelligence reports.</p>
+            </div>
+            <div class="page-header-actions">
+              <button class="btn-generate" id="generateBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Generate Report
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-grid" style="grid-template-columns:repeat(4,1fr);">
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Total Reports</span>
+                <div class="stat-icon purple">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4044e4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+              </div>
+              <div class="stat-value">48</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+6</span>
+                <span class="stat-meta">This month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Ready to Download</span>
+                <div class="stat-icon green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2ace5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+              </div>
+              <div class="stat-value">36</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend up"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>+4</span>
+                <span class="stat-meta">Since last week</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Pending Generation</span>
+                <div class="stat-icon orange">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+              </div>
+              <div class="stat-value">8</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend stable"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>Stable</span>
+                <span class="stat-meta">In queue</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-header">
+                <span class="stat-label">Storage Used</span>
+                <div class="stat-icon red">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                </div>
+              </div>
+              <div class="stat-value">2.4GB</div>
+              <div class="stat-card-footer">
+                <span class="stat-trend down"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>68%</span>
+                <span class="stat-meta">of 3.5 GB limit</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter row -->
+          <div class="reports-filter-row">
+            <div class="report-search-wrap">
+              <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input class="report-search-input" type="text" id="reportSearch" placeholder="Search reports by name or type..." />
+            </div>
+            <select class="filter-select" id="typeFilter">
+              <option value="all">All Types</option>
+              <option value="threat">Threat Intelligence</option>
+              <option value="honeypot">Honeypot Activity</option>
+              <option value="attack">Attack Analysis</option>
+              <option value="summary">Executive Summary</option>
+            </select>
+            <select class="filter-select" id="statusFilter">
+              <option value="all">All Statuses</option>
+              <option value="ready">Ready</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
+            </select>
+          </div>
+
+          <!-- Reports Table -->
+          <div class="reports-table-wrap">
+            <table class="reports-table">
+              <thead>
+                <tr>
+                  <th>Report Name</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Size</th>
+                  <th>Generated</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="reportsTableBody"></tbody>
+            </table>
+            <div class="reports-table-footer">
+              <span class="table-footer-info" id="reportsInfo">Showing 1–10 of 48 reports</span>
+              <div class="pagination" id="reportsPagination"></div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+
+    <!-- FAB -->
+    <button class="fab" aria-label="Assistant">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/><path d="M9 13c0 0 1 1 3 1s3-1 3-1"/></svg>
+    </button>
+
+    <!-- ══ GENERATE REPORT MODAL ══ -->
+    <div class="modal-overlay hidden" id="genOverlay">
+      <div class="gen-modal-card">
+
+        <div class="gen-modal-header">
+          <h3 class="gen-modal-title">Generate New Report</h3>
+          <button class="gen-modal-close" id="genCloseBtn" aria-label="Close">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="gen-modal-fields">
+          <!-- Report name -->
+          <div class="gen-modal-field">
+            <label for="reportName">Report Name</label>
+            <input type="text" id="reportName" placeholder="e.g. Q4 Threat Summary" autocomplete="off" />
+          </div>
+
+          <!-- Type selector -->
+          <div class="gen-modal-field">
+            <label>Report Type</label>
+            <div class="report-type-grid" id="typeGrid">
+              <label class="report-type-opt selected" data-type="threat">
+                <input type="radio" name="rtype" value="threat" checked />
+                <div class="opt-icon type-icon-threat">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <span class="opt-label">Threat Intelligence</span>
+              </label>
+              <label class="report-type-opt" data-type="honeypot">
+                <input type="radio" name="rtype" value="honeypot" />
+                <div class="opt-icon type-icon-honey">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="opt-label">Honeypot Activity</span>
+              </label>
+              <label class="report-type-opt" data-type="attack">
+                <input type="radio" name="rtype" value="attack" />
+                <div class="opt-icon type-icon-attack">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <span class="opt-label">Attack Analysis</span>
+              </label>
+              <label class="report-type-opt" data-type="summary">
+                <input type="radio" name="rtype" value="summary" />
+                <div class="opt-icon type-icon-summary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <span class="opt-label">Executive Summary</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Date range -->
+          <div class="gen-modal-field">
+            <label for="reportRange">Date Range</label>
+            <select id="reportRange">
+              <option>Last 7 days</option>
+              <option>Last 30 days</option>
+              <option selected>Last 90 days</option>
+              <option>Last 6 months</option>
+              <option>Last 12 months</option>
+            </select>
+          </div>
+
+          <!-- Format -->
+          <div class="gen-modal-field">
+            <label for="reportFormat">Format</label>
+            <select id="reportFormat">
+              <option>PDF</option>
+              <option>CSV</option>
+              <option>JSON</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gen-modal-btns">
+          <button class="btn-modal-cancel" id="genCancelBtn">Cancel</button>
+          <button class="btn-modal-generate" id="genConfirmBtn">Generate Report</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <script>
+      /* ════════════ DATA ════════════ */
+      const typeConfig = {
+        threat:   { label: 'Threat Intelligence', iconClass: 'type-icon-threat' },
+        honeypot: { label: 'Honeypot Activity',   iconClass: 'type-icon-honey'  },
+        attack:   { label: 'Attack Analysis',      iconClass: 'type-icon-attack' },
+        summary:  { label: 'Executive Summary',    iconClass: 'type-icon-summary'},
+      };
+
+      const typeIcons = {
+        threat:   `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+        honeypot: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+        attack:   `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+        summary:  `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+      };
+
+      const statuses = ['ready','ready','ready','pending','failed'];
+      const formats  = ['PDF','CSV','JSON','PDF','PDF'];
+      const names    = [
+        'Q3 Threat Intelligence Summary','Honeypot Activity - Oct 2023',
+        'Attack Vector Analysis','Executive Security Report',
+        'Critical CVE Exposure Report','DDoS Pattern Report',
+        'APT Group Tracking Report','Network Intrusion Log',
+        'Malware Detection Summary','Phishing Campaign Analysis',
+        'Ransomware Exposure Report','SSH Brute Force Report',
+      ];
+
+      function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+      function randSize() { return (Math.random() * 4 + 0.3).toFixed(1) + ' MB'; }
+      function randDate() {
+        const d = new Date(Date.now() - Math.random() * 30 * 86400000);
+        return d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+      }
+
+      const allReports = Array.from({length: 48}, (_, i) => ({
+        id: i,
+        name:   names[i % names.length],
+        type:   rand(Object.keys(typeConfig)),
+        status: rand(statuses),
+        size:   randSize(),
+        date:   randDate(),
+        format: rand(formats),
+      }));
+
+      /* ════════════ RENDER TABLE ════════════ */
+      const PAGE_SIZE = 10;
+      let currentPage = 1;
+      let filtered    = [...allReports];
+
+      function renderTable() {
+        const tbody = document.getElementById('reportsTableBody');
+        const start = (currentPage - 1) * PAGE_SIZE;
+        const slice = filtered.slice(start, start + PAGE_SIZE);
+        const total = filtered.length;
+        tbody.innerHTML = '';
+
+        if (!slice.length) {
+          tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:48px;color:var(--clr-text-muted);font-size:.88rem;font-weight:600;">No reports found.</td></tr>`;
+        } else {
+          slice.forEach(r => {
+            const cfg = typeConfig[r.type];
+            const sc  = `status-${r.status}`;
+            const sl  = r.status.charAt(0).toUpperCase() + r.status.slice(1);
+            const tr  = document.createElement('tr');
+            tr.innerHTML = `
+              <td>
+                <div class="report-name">${r.name}</div>
+                <div class="report-subname">${r.format}</div>
+              </td>
+              <td>
+                <div class="report-type-cell">
+                  <div class="report-type-icon ${cfg.iconClass}">${typeIcons[r.type]}</div>
+                  ${cfg.label}
+                </div>
+              </td>
+              <td><span class="report-status ${sc}">${sl}</span></td>
+              <td class="report-size">${r.size}</td>
+              <td style="font-size:.82rem;color:var(--clr-text-muted);">${r.date}</td>
+              <td>
+                <div class="report-actions">
+                  ${r.status === 'ready'
+                    ? `<button class="btn-download" onclick="downloadReport('${r.name}')">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                       </button>
+                       <button class="btn-preview">Preview</button>`
+                    : `<span style="font-size:.78rem;color:#aab0c6;font-weight:500;">${r.status === 'pending' ? 'Generating...' : 'Failed'}</span>`
+                  }
+                </div>
+              </td>
+            `;
+            tbody.appendChild(tr);
+          });
+        }
+
+        const showing = Math.min(start + PAGE_SIZE, total);
+        document.getElementById('reportsInfo').textContent =
+          total ? `Showing ${start+1}–${showing} of ${total} reports` : 'No reports found';
+        renderPagination(total);
+      }
+
+      function renderPagination(total) {
+        const pages = Math.ceil(total / PAGE_SIZE);
+        const pag   = document.getElementById('reportsPagination');
+        pag.innerHTML = '';
+
+        const prev = mkBtn('‹', currentPage > 1, () => { currentPage--; renderTable(); });
+        pag.appendChild(prev);
+
+        for (let p = 1; p <= pages; p++) {
+          if (p !== 1 && p !== pages && Math.abs(p - currentPage) > 1) {
+            if (pag.lastChild.textContent !== '…') {
+              const el = document.createElement('span');
+              el.textContent = '…';
+              el.style.cssText = 'padding:0 4px;color:var(--clr-text-muted);font-size:.8rem;';
+              pag.appendChild(el);
+            }
+            continue;
+          }
+          const btn = mkBtn(p, true, () => { currentPage = p; renderTable(); });
+          if (p === currentPage) btn.classList.add('active');
+          pag.appendChild(btn);
+        }
+
+        const next = mkBtn('›', currentPage < pages, () => { currentPage++; renderTable(); });
+        pag.appendChild(next);
+      }
+
+      function mkBtn(label, enabled, onClick) {
+        const btn = document.createElement('button');
+        btn.className = 'page-btn';
+        btn.textContent = label;
+        btn.disabled = !enabled;
+        if (!enabled) btn.style.opacity = '.35';
+        btn.addEventListener('click', onClick);
+        return btn;
+      }
+
+      function downloadReport(name) {
+        const a = document.createElement('a');
+        a.href = '#'; a.download = name + '.pdf';
+        a.click();
+      }
+
+      /* ════════════ FILTERS ════════════ */
+      function applyFilters() {
+        const q  = document.getElementById('reportSearch').value.toLowerCase();
+        const tf = document.getElementById('typeFilter').value;
+        const sf = document.getElementById('statusFilter').value;
+        filtered = allReports.filter(r =>
+          (tf === 'all' || r.type === tf) &&
+          (sf === 'all' || r.status === sf) &&
+          (r.name.toLowerCase().includes(q) || typeConfig[r.type].label.toLowerCase().includes(q))
+        );
+        currentPage = 1;
+        renderTable();
+      }
+
+      ['reportSearch','typeFilter','statusFilter'].forEach(id => {
+        document.getElementById(id).addEventListener('input', applyFilters);
+        document.getElementById(id).addEventListener('change', applyFilters);
+      });
+
+      /* ════════════ GENERATE MODAL ════════════ */
+      const genOverlay  = document.getElementById('genOverlay');
+      const generateBtn = document.getElementById('generateBtn');
+      const genClose    = document.getElementById('genCloseBtn');
+      const genCancel   = document.getElementById('genCancelBtn');
+      const genConfirm  = document.getElementById('genConfirmBtn');
+
+      function openGen()  { genOverlay.classList.remove('hidden'); }
+      function closeGen() {
+        genOverlay.classList.add('hidden');
+        document.getElementById('reportName').value = '';
+      }
+
+      generateBtn.addEventListener('click', openGen);
+      genClose.addEventListener('click', closeGen);
+      genCancel.addEventListener('click', closeGen);
+      genOverlay.addEventListener('click', e => { if (e.target === genOverlay) closeGen(); });
+
+      /* Type grid radio behaviour */
+      document.querySelectorAll('.report-type-opt').forEach(opt => {
+        opt.addEventListener('click', () => {
+          document.querySelectorAll('.report-type-opt').forEach(o => o.classList.remove('selected'));
+          opt.classList.add('selected');
+          opt.querySelector('input').checked = true;
+        });
+      });
+
+      genConfirm.addEventListener('click', () => {
+        const name = document.getElementById('reportName').value.trim();
+        if (!name) {
+          const el = document.getElementById('reportName');
+          el.style.borderColor = '#e74c3c';
+          el.animate([{transform:'translateX(0)'},{transform:'translateX(-5px)'},{transform:'translateX(5px)'},{transform:'translateX(0)'}],{duration:280,easing:'ease-out'});
+          el.addEventListener('input', () => { el.style.borderColor = ''; }, {once:true});
+          return;
+        }
+        const type = document.querySelector('input[name="rtype"]:checked')?.value || 'threat';
+        allReports.unshift({ id: Date.now(), name, type, status:'pending', size:'—', date:'Just now', format: document.getElementById('reportFormat').value });
+        filtered = [...allReports];
+        renderTable();
+        closeGen();
+      });
+
+      /* ════════════ SIDEBAR ════════════ */
+      document.getElementById('hamburgerBtn').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.toggle('open');
+      });
+
+      /* ════════════ INIT ════════════ */
+      renderTable();
+    </script>
+  </body>
+</html>
