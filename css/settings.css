@@ -1,0 +1,400 @@
+/* =========================================
+   settings.css — Trap-Intell Settings Page
+   Shell styles → dashboard.css
+   ========================================= */
+
+/* ── Collapsed icon-only sidebar override ── */
+.sidebar-collapsed {
+  width: 68px;
+  overflow: visible;
+}
+
+.sidebar-collapsed .sidebar-logo span,
+.sidebar-collapsed .nav-item-text,
+.sidebar-collapsed .sidebar-upgrade,
+.sidebar-collapsed .user-info,
+.sidebar-collapsed .user-chevron {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-logo {
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.sidebar-collapsed .sidebar-nav {
+  padding: 12px 8px;
+  align-items: center;
+}
+
+.sidebar-collapsed .nav-item {
+  justify-content: center;
+  padding: 11px;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.sidebar-collapsed .nav-item svg {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar-collapsed .sidebar-user {
+  justify-content: center;
+  padding: 14px 0;
+}
+
+.sidebar-collapsed .user-avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 0;           /* hide initials text */
+  background: transparent;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* User avatar as image in collapsed sidebar */
+.sidebar-collapsed .user-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.sidebar-collapsed .user-avatar-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--clr-blue-purple-20);
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Adjust main area margin for collapsed sidebar */
+.main-area-collapsed {
+  margin-left: 68px;
+}
+
+/* Tooltip on hover for collapsed nav items */
+.sidebar-collapsed .nav-item {
+  position: relative;
+}
+
+.sidebar-collapsed .nav-item::after {
+  content: attr(data-label);
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--clr-dark-navy);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+
+.sidebar-collapsed .nav-item:hover::after {
+  opacity: 1;
+}
+
+/* ════════════════════════════════
+   SETTINGS LAYOUT
+════════════════════════════════ */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── Settings Tab Nav ── */
+.settings-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.settings-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  transition: background 0.18s, color 0.18s;
+  text-decoration: none;
+}
+
+.settings-nav-item svg {
+  flex-shrink: 0;
+  opacity: 0.55;
+  transition: opacity 0.18s;
+}
+
+.settings-nav-item:hover {
+  background: #f4f5fa;
+  color: var(--clr-dark-navy);
+}
+
+.settings-nav-item:hover svg { opacity: 0.85; }
+
+.settings-nav-item.active {
+  background: var(--clr-blue-purple-10);
+  color: var(--clr-blue-purple);
+}
+
+.settings-nav-item.active svg { opacity: 1; color: var(--clr-blue-purple); }
+
+/* ════════════════════════════════
+   SETTINGS CONTENT PANEL
+════════════════════════════════ */
+.settings-panel {
+  background: #fff;
+  border: 1.5px solid #e8eaf0;
+  border-radius: 18px;
+  padding: 36px 40px 32px;
+  min-height: 460px;
+  animation: riseUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Profile Section ── */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #f0f1f7;
+}
+
+.profile-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.profile-avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ecedf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.18s;
+  border: 2px solid #e8eaf0;
+}
+
+.profile-avatar-circle:hover { background: #e0e1f0; }
+
+.profile-avatar-circle svg { color: #aab0c6; }
+
+.profile-identity { flex: 1; }
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-blue-purple);
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.profile-role-title {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.profile-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: #aab0c6;
+  font-weight: 500;
+}
+
+.profile-location svg { flex-shrink: 0; }
+
+/* ── Profile Form ── */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-row-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  letter-spacing: 0.3px;
+}
+
+.form-field input {
+  border: 1.5px solid #e8eaf0;
+  border-radius: 10px;
+  padding: 13px 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.9rem;
+  color: var(--clr-dark-navy);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.form-field input:focus {
+  border-color: var(--clr-blue-purple);
+  box-shadow: 0 0 0 3px var(--clr-blue-purple-10);
+}
+
+.form-field input::placeholder { color: #aab0c6; }
+
+/* Read-only / disabled field */
+.form-field input.field-readonly {
+  background: #f4f5fa;
+  color: var(--clr-text-muted);
+  cursor: not-allowed;
+  border-color: #e8eaf0;
+}
+
+.form-field input.field-readonly:focus {
+  border-color: #e8eaf0;
+  box-shadow: none;
+}
+
+/* Divider above save button */
+.form-divider {
+  height: 1px;
+  background: #f0f1f7;
+  margin: 8px 0 24px;
+}
+
+/* Save / Submit button */
+.btn-save-profile {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--clr-blue-purple);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 24px rgba(64, 68, 228, 0.32);
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+.btn-save-profile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(64, 68, 228, 0.42);
+}
+
+.btn-save-profile:active { transform: translateY(0); }
+
+/* Success state */
+.btn-save-profile.saved {
+  background: #2ace5f;
+  box-shadow: 0 6px 20px rgba(42, 206, 95, 0.3);
+}
+
+/* ── Placeholder panels for other tabs ── */
+.tab-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  gap: 14px;
+  color: var(--clr-text-muted);
+  text-align: center;
+}
+
+.tab-placeholder svg { opacity: 0.2; }
+.tab-placeholder h3 { font-size: 1rem; font-weight: 700; color: var(--clr-dark-navy); opacity: 0.5; }
+.tab-placeholder p  { font-size: 0.85rem; }
+
+/* ── Toast notification ── */
+.settings-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--clr-dark-navy);
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 300;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+  .settings-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .settings-panel { padding: 24px 20px 24px; }
+  .form-row-two { grid-template-columns: 1fr; }
+  .profile-header { flex-direction: column; text-align: center; }
+  .profile-location { justify-content: center; }
+  .settings-nav { grid-template-columns: repeat(2, 1fr); }
+}
