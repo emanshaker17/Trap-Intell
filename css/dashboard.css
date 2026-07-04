@@ -1095,3 +1095,27 @@
     grid-template-columns: 1fr;
   }
 }
+/* ── Floating Action Button (Assistant) ── */
+.fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--clr-blue-purple);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 28px rgba(64, 68, 228, 0.4);
+  transition: transform 0.18s, box-shadow 0.18s;
+  z-index: 99;
+}
+
+.fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 36px rgba(64, 68, 228, 0.5);
+}
